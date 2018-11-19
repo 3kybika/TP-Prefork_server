@@ -1,6 +1,7 @@
 FROM python:3
 
-# Копируем исходный код в Docker-контейнер
+ADD ./httptest /var/www/html/httptest/
+
 ENV WORK /opt
 ADD ./ $WORK
 WORKDIR $WORK
